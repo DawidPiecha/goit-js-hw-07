@@ -1,6 +1,15 @@
 :root {
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --animation-duration: 250ms;
+  --gradient: linear-gradient(
+    45deg,
+    #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ff9671,
+    #ffc75f,
+    #f9f871
+  );
 }
 
 .gallery {
@@ -31,6 +40,7 @@
   width: 100%;
   object-fit: cover;
   transition: transform var(--animation-duration) var(--timing-function);
+  border-radius: 2%;
 }
 
 .gallery__link {
@@ -41,4 +51,22 @@
 
 .gallery__link:hover {
   cursor: zoom-in;
+}
+.nav-button {
+  border: 0;
+  border-radius: 4%;
+  padding: 15px, 15px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  background-image: var(--gradient);
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.5s;
+}
+.nav-button:hover,
+.nav-button:focus {
+  background-position: right;
+}
+.nav-button a {
+  color: darkblue;
 }
